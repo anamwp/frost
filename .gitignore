@@ -29,7 +29,7 @@
 
 # DO NOT ignore these plugins...
 !/plugins/wordpress-seo
-!/plugins/gutenberg-starter
+!/plugins/gutenberg-starter/
 
 #---------------------------
 # WP MU plugins: often
