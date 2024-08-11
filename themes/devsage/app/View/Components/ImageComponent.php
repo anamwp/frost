@@ -30,6 +30,10 @@ class ImageComponent extends Component
      * @return void
      */
     public function get_image_url( $imageId ){
+        $image_placeholder_url = @asset('images/placeholder.jpg');
+        if( !$imageId ){
+            return '<img src="'.$image_placeholder_url.'">';
+        }
         /**
          * If $imageId is not a number, return false
          */

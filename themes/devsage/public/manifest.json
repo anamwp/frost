@@ -4,6 +4,7 @@
   "runtime.js": "js/runtime.js",
   "images/icons/logo.svg": "images/icons/logo.svg",
   "images/icons/lorem.jpg": "images/icons/lorem.jpg",
+  "images/placeholder.jpg": "images/placeholder.jpg",
   "../theme.json": "../theme.json",
   "hmr.json": "hmr.json",
   "entrypoints.json": "entrypoints.json"
