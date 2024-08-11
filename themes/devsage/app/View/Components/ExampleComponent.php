@@ -13,7 +13,7 @@ class ExampleComponent extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($title="")
+    public function __construct($title="Hello from component")
     {
         $this->title = $title;   
     }
