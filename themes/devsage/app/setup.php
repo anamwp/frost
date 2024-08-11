@@ -97,7 +97,7 @@ add_action('after_setup_theme', function () {
      *
      * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content
      */
-    add_theme_support('responsive-embeds');
+    // add_theme_support('responsive-embeds');
 
     /**
      * Enable HTML5 markup support.
@@ -120,6 +120,22 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
      */
     add_theme_support('customize-selective-refresh-widgets');
+    /**
+     * support appearance tools
+     */
+    add_theme_support( 'appearance-tools' );
+    add_theme_support( 'link-color' );
+    add_theme_support( 'border' );
+    add_theme_support( 'custom-spacing' );
+    // add_theme_support( 'responsive-embeds' );
+    add_theme_support( 'editor-styles' );
+    add_theme_support( 'wp-block-styles' );
+    add_theme_support( 'align-wide' );
+
+    add_editor_style( 'style-editor.css' );
+    add_theme_support( 'custom-line-height' );
+
+
 }, 20);
 
 /**
