@@ -6,7 +6,7 @@ namespace App;
 
 use WP_Query;
 
-# shortcode 
+// shortcode
 
 
 
@@ -19,18 +19,20 @@ use WP_Query;
  */
 function wpdocs_bartag_func( $atts ) {
 
-	$atts = shortcode_atts(
+	$atts  = shortcode_atts(
 		array(
 			'key' => '',
 		),
 		$atts,
 		'custom_field_data'
 	);
-	$query = new \WP_Query( array(
-		'post_type' => 'post',
-		'posts_per_page' => 1,
-		'orderby' => 'rand',
-	) );
+	$query = new \WP_Query(
+		array(
+			'post_type'      => 'post',
+			'posts_per_page' => 1,
+			'orderby'        => 'rand',
+		)
+	);
 
 	// $custom_field_key = $atts['key'] ? $atts['key'] : '';
 	ob_start();
@@ -51,4 +53,4 @@ function wpdocs_bartag_func( $atts ) {
 	return ob_get_clean();
 }
 
-add_shortcode( 'custom_field_data', __NAMESPACE__.'\wpdocs_bartag_func' );
+add_shortcode( 'custom_field_data', __NAMESPACE__ . '\wpdocs_bartag_func' );

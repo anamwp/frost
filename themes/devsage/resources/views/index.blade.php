@@ -20,6 +20,6 @@
 	</div>
 @endsection
 
-@section('sidebar')
+{{-- @section('sidebar')
   @include('sections.sidebar')
-@endsection
+@endsection --}}
