@@ -6,6 +6,7 @@
 
 namespace App;
 
+use function Roots\asset;
 /**
  * Add "… Continued" to the excerpt.
  *
@@ -67,3 +68,11 @@ function add_class_for_all_menu_location_atts( $atts, $item, $args, $depth ) {
 	return $atts;
 }
 add_filter( 'nav_menu_link_attributes', __NAMESPACE__ . '\add_class_for_all_menu_location_atts', 10, 4 );
+
+
+add_filter('wp_resource_hints', function ($hints, $relation_type) {
+    if ('prefetch' === $relation_type) {
+        $hints[] = asset('app-styles.css')->uri(); // Adjust path if necessary
+    }
+    return $hints;
+}, 10, 2);

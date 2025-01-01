@@ -35,7 +35,8 @@ function handleACFOptionPanel() {
 add_action(
 	'wp_enqueue_scripts',
 	function () {
-		bundle( 'app' )->enqueue();
+		bundle( 'app-scripts' )->enqueue(['handle' => 'app-scripts', 'in_footer' => true]);
+		bundle( 'app-styles' )->enqueue([ 'handle' => 'app-styles' ]);
 	},
 	100
 );
@@ -48,7 +49,8 @@ add_action(
 add_action(
 	'enqueue_block_editor_assets',
 	function () {
-		bundle( 'editor' )->enqueue();
+		bundle( 'editor-scripts' )->enqueue();
+		bundle( 'editor-styles' )->enqueue();
 	},
 	100
 );

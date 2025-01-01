@@ -1,19 +1,37 @@
 {
-  "app": {
+  "app-scripts": {
     "js": [
-      "js/runtime.js",
-      "js/app.js"
+      "js/runtime.c039ed.js",
+      "js/app-scripts.473b05.js"
     ],
     "dependencies": []
   },
-  "editor": {
+  "app-styles": {
     "js": [
-      "js/runtime.js",
-      "js/editor.js"
+      "js/runtime.c039ed.js"
+    ],
+    "css": [
+      "css/app-styles.04ad96.css"
+    ],
+    "dependencies": []
+  },
+  "editor-scripts": {
+    "js": [
+      "js/runtime.c039ed.js",
+      "js/editor-scripts.9aca8a.js"
     ],
     "dependencies": [
       "wp-data",
       "wp-hooks"
     ]
+  },
+  "editor-styles": {
+    "js": [
+      "js/runtime.c039ed.js"
+    ],
+    "css": [
+      "css/editor-styles.5d64d1.css"
+    ],
+    "dependencies": []
   }
 }
