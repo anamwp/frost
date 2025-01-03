@@ -14,8 +14,8 @@ export default async (app) => {
 	 * @see {@link https://bud.js.org/reference/bud.assets}
 	 */
 	app.entry('app-scripts', ['@scripts/app'])
-		.entry('app-styles', ['@styles/app'])
 		.entry('editor-scripts', ['@scripts/editor'])
+		.entry('app-styles', ['@styles/app'])
 		.entry('editor-styles', ['@styles/editor'])
 		.assets(['images']);
 
@@ -25,6 +25,10 @@ export default async (app) => {
 	 * @see {@link https://bud.js.org/reference/bud.setPublicPath}
 	 */
 	app.setPublicPath('/app/themes/sage/public/');
+	// app.setPath({
+	// 	css: 'public/css',
+	// 	js: 'public/js',
+	// });
 
 	/**
 	 * Development server settings

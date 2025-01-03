@@ -6,15 +6,6 @@
     ],
     "dependencies": []
   },
-  "app-styles": {
-    "js": [
-      "js/runtime.c039ed.js"
-    ],
-    "css": [
-      "css/app-styles.04ad96.css"
-    ],
-    "dependencies": []
-  },
   "editor-scripts": {
     "js": [
       "js/runtime.c039ed.js",
@@ -24,6 +15,15 @@
       "wp-data",
       "wp-hooks"
     ]
+  },
+  "app-styles": {
+    "js": [
+      "js/runtime.c039ed.js"
+    ],
+    "css": [
+      "css/app-styles.04ad96.css"
+    ],
+    "dependencies": []
   },
   "editor-styles": {
     "js": [
