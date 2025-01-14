@@ -13,10 +13,22 @@ export default async (app) => {
 	 * @see {@link https://bud.js.org/reference/bud.entry}
 	 * @see {@link https://bud.js.org/reference/bud.assets}
 	 */
+	// app.entry('app-scripts', ['@scripts/app'])
+	// 	.entry('editor-scripts', ['@scripts/editor'])
+	// 	.entry('app-styles', ['@styles/app'])
+	// 	.entry('editor-styles', ['@styles/editor'])
+	// 	.assets(['images']);
 	app.entry('app-scripts', ['@scripts/app'])
 		.entry('editor-scripts', ['@scripts/editor'])
 		.entry('app-styles', ['@styles/app'])
 		.entry('editor-styles', ['@styles/editor'])
+		.set(
+			'build.output.filename',
+			(path) =>
+				app.isProduction
+					? '[name].[contenthash:8].[ext]' // Hashed filenames in production
+					: '[name].[ext]' // Simple filenames in development
+		)
 		.assets(['images']);
 
 	/**
@@ -25,10 +37,6 @@ export default async (app) => {
 	 * @see {@link https://bud.js.org/reference/bud.setPublicPath}
 	 */
 	app.setPublicPath('/app/themes/sage/public/');
-	// app.setPath({
-	// 	css: 'public/css',
-	// 	js: 'public/js',
-	// });
 
 	/**
 	 * Development server settings

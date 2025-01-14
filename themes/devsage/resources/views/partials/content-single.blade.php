@@ -7,7 +7,13 @@
     @include('partials.entry-meta')
   </header>
 
-  <div class="e-content mb-5">
+  @if (has_post_thumbnail())
+    <div class="mb-5 post-featured-image">
+      @php(the_post_thumbnail('large', ['class' => 'w-full h-auto']))
+    </div>
+  @endif
+
+  <div class="e-content single-post-content mb-5">
     @php(the_content())
   </div>
 
