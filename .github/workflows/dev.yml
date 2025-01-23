@@ -13,4 +13,4 @@ jobs:
               with:
                   REMOTE_PATH: 'wp-content/'
                   WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
-                  WPE_ENV: falconhunter
+                  WPE_ENV: falconhuntdev
