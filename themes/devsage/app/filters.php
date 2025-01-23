@@ -76,3 +76,15 @@ add_filter('wp_resource_hints', function ($hints, $relation_type) {
     }
     return $hints;
 }, 10, 2);
+
+function allow_cors_for_rest_api() {
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
+    header("Access-Control-Allow-Credentials: true");
+    header("Access-Control-Allow-Headers: Authorization, Content-Type");
+}
+// add_action('rest_api_init', function () {
+//     add_action('send_headers', 'allow_cors_for_rest_api');
+// });
+
+add_filter('rest_allow_anonymous_comments', '__return_true');
