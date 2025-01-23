@@ -1,3 +1,7 @@
 [submodule "plugins/gutenberg-starter"]
 	path = plugins/gutenberg-starter
 	url = git@github-personal:anamwp/gutenberg-starter.git
+
+[submodule "plugins/wp-cli-post-importer"]
+	path = plugins/wp-cli-post-importer
+	url = git@github-personal:anamwp/wp-cli-post-importer.git
